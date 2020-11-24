@@ -35,3 +35,20 @@ assignments
 ----+--------------------------+-----------------------+-----+---------+----------
   1 | Delectus nam repellendus | Excepturi aliquam ... |   1 |       1 |       30
 (1 row)
+
+
+teachers
+ id |        name        | is_active | start_date |  end_date  
+----+--------------------+-----------+------------+------------
+  1 | Helmer Rodriguez   | t         | 2018-02-12 | 
+  2 | Rosalyn Raynor     | t         | 2018-02-12 | 
+  3 | Roberto Towne      | f         | 2018-02-12 | 2018-08-11
+
+
+assistance_requests
+ id | student_id | teacher_id | assignment_id |     created_at      |     started_at      |    completed_at     | student_feedback | teacher_feedback 
+----+------------+------------+---------------+---------------------+---------------------+---------------------+------------------+------------------
+  1 |          1 |          1 |             6 | 2018-02-12 08:00:00 | 2018-02-12 08:06:00 | 2018-02-12 08:13:20 | Good             | Good
+  2 |          1 |          2 |             9 | 2018-02-12 08:00:00 | 2018-02-12 08:02:00 | 2018-02-12 08:08:40 | Good             | Great
+  3 |          2 |          1 |            10 | 2018-02-12 08:00:00 | 2018-02-12 08:02:00 | 2018-02-12 08:06:00 | Great            | Good
+
