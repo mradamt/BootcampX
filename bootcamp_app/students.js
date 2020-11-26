@@ -14,9 +14,9 @@ pool.query(`
 SELECT students.id, students.name AS student_name, cohorts.name AS cohort_name
 FROM students
 JOIN cohorts ON cohort_id=cohorts.id
-WHERE cohorts.name LIKE '${month}%'
-LIMIT ${limit};
-`)
+WHERE cohorts.name LIKE $1
+LIMIT $2;
+`, [`${month}%`, limit])
 .then(res => {
   console.log(res.rows);
   // res.rows.forEach(user => {
